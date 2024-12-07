@@ -10,10 +10,12 @@ export function createMarkup(images) {
       image =>
         `<li class="list-item">
       <a href="${image.largeImageURL}"><img src="${image.webformatURL}" alt="${image.tags}"></a>
+      <div class="info">
       <p>Likes<span>${image.likes}</span></p>
     <p>Views<span>${image.views}</span></p>
     <p>Comments<span>${image.comments}</span></p>
     <p>Downloads<span>${image.downloads}</span></p>
+    </div>
     </li>`
     )
     .join('');
